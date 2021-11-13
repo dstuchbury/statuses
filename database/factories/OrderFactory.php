@@ -17,6 +17,7 @@ class OrderFactory extends Factory
             'date_received' => Carbon::now()->toDateString(),
             'date_sla' => Carbon::now()->addDays(3)->toDateString(),
             'status' => $this->faker->numberBetween(1, 18),
+            'price_total_net' => $this->faker->numberBetween(100, 200000),
         ];
     }
 }

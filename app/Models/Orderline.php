@@ -4,18 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\DB;
 
-class Order extends Model
+class Orderline extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'order_id',
+        'price_unit',
+        'quantity',
         'status',
-        'order_ref',
-        'date_received',
-        'date_sla'
     ];
 
     public const STATUS = [
@@ -60,10 +60,10 @@ class Order extends Model
         'queued reprint' => 18
     ];
 
-    // Relationships
-    public function orderlines(): hasMany
+    // relationships
+    public function order(): belongsTo
     {
-        return $this->hasMany(Orderline::class);
+        return $this->belongsTo(Order::class);
     }
 
     public function getStatus(): string

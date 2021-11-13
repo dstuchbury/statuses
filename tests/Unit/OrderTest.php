@@ -20,6 +20,7 @@ class OrderTest extends TestCase
 
         $this->assertEquals(false, $response);
         $this->assertDatabaseHas('orders', ['status' => $order::STATUS_NAMES[$order->getStatus()]]);
+        $this->assertDatabaseMissing('orders', ['status' => 'invalid status']);
     }
 
     /** @test */

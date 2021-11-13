@@ -2,11 +2,45 @@
 
 namespace App\Models;
 
+use Database\Factories\OrderFactory;
+use Eloquent;
+use Exception;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Throwable;
 
+/**
+ * App\Models\Order
+ *
+ * @property int $id
+ * @property int $status
+ * @property string $order_ref
+ * @property string $date_received
+ * @property string $date_sla
+ * @property string $price_total_net
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection|Orderline[] $orderlines
+ * @property-read int|null $orderlines_count
+ * @method static OrderFactory factory(...$parameters)
+ * @method static Builder|Order newModelQuery()
+ * @method static Builder|Order newQuery()
+ * @method static Builder|Order query()
+ * @method static Builder|Order whereCreatedAt($value)
+ * @method static Builder|Order whereDateReceived($value)
+ * @method static Builder|Order whereDateSla($value)
+ * @method static Builder|Order whereId($value)
+ * @method static Builder|Order whereOrderRef($value)
+ * @method static Builder|Order wherePriceTotalNet($value)
+ * @method static Builder|Order whereStatus($value)
+ * @method static Builder|Order whereUpdatedAt($value)
+ * @mixin Eloquent
+ */
 class Order extends Model
 {
     use HasFactory;
@@ -78,7 +112,7 @@ class Order extends Model
                 $this->status = $this::STATUS_NAMES[$description];
                 $this->save();
             }, 5);
-        } catch (\Exception | \Throwable $e) {
+        } catch (Exception | Throwable $e) {
             return false;
         }
 

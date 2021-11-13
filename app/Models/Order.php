@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Order extends Model
 {
@@ -37,7 +38,7 @@ class Order extends Model
         18 => 'queued reprint'
     ];
 
-    public const STATUS_DESCRIPTIONS = [
+    public const STATUS_NAMES = [
         'new' => 1,
         'queued downloading' => 2,
         'downloaded' => 3,
@@ -66,9 +67,11 @@ class Order extends Model
     public function setStatus($description): bool
     {
         try {
-            $this->status = $this::STATUS_DESCRIPTIONS[$description];
-            $this->save();
-        } catch (\Exception $e) {
+            DB::transaction(function() use ($description) {
+                $this->status = $this::STATUS_NAMES[$description];
+                $this->save();
+            }, 5);
+        } catch (\Exception | \Throwable $e) {
             return false;
         }
 

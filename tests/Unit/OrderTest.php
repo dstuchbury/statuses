@@ -4,8 +4,9 @@ namespace Tests\Unit;
 
 use App\Models\Order;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
-class OrderTest extends \Tests\TestCase
+class OrderTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -18,7 +19,7 @@ class OrderTest extends \Tests\TestCase
         $response = $order->setStatus('invalid status');
 
         $this->assertEquals(false, $response);
-        $this->assertDatabaseHas('orders', ['status' => $order::STATUS_DESCRIPTIONS[$order->getStatus()]]);
+        $this->assertDatabaseHas('orders', ['status' => $order::STATUS_NAMES[$order->getStatus()]]);
     }
 
     /** @test */
@@ -30,6 +31,6 @@ class OrderTest extends \Tests\TestCase
         $response = $order->setStatus('queued packing');
 
         $this->assertEquals(true, $response);
-        $this->assertDatabaseHas('orders', ['status' => $order::STATUS_DESCRIPTIONS['queued packing']]);
+        $this->assertDatabaseHas('orders', ['status' => $order::STATUS_NAMES['queued packing']]);
     }
 }

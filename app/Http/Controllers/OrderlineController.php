@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderlineRequest;
 use App\Models\Orderline;
 use App\Services\OrderService;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class OrderlineController extends Controller
         //
     }
 
-    public function store(Request $request)
+    public function store(OrderlineRequest $request)
     {
         //
     }
@@ -40,7 +41,7 @@ class OrderlineController extends Controller
         //
     }
 
-    public function update(Request $request, Orderline $orderline)
+    public function update(OrderlineRequest $request, Orderline $orderline)
     {
         // Do the updates
 

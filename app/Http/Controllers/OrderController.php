@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderRequest;
 use App\Models\Order;
 use App\Services\OrderService;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class OrderController extends Controller
         //
     }
 
-    public function store(Request $request)
+    public function store(OrderRequest $request)
     {
 
     }
@@ -44,9 +45,10 @@ class OrderController extends Controller
         //
     }
 
-    public function update(Request $request, Order $order)
+    public function update(OrderRequest $request, Order $order)
     {
         // Do whatever updating is required.
+        $validated = $request->validated();
 
         // Call a method in our service class.
         $this->orderService->recalculatePrices($order);

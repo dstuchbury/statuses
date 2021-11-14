@@ -24,7 +24,8 @@ class OrderTest extends TestCase
 
         $data = ['foo' => 'bar'];
 
-        $this->patchJson("/api/orders/$order->id", $data);
+        $response = $this->patchJson("/api/orders/$order->id", $data);
+        $response->assertStatus(200);
         $this->assertEquals(300, $order->refresh()->price_total_net);
     }
 }

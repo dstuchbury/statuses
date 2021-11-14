@@ -68,7 +68,8 @@ class Orderline extends Model
         15 => 'shipped',
         16 => 'address issue',
         17 => 'artwork issue',
-        18 => 'queued reprint'
+        18 => 'queued reprint',
+        19 => 'cancelled',
     ];
 
     public const STATUS_NAMES = [
@@ -89,7 +90,8 @@ class Orderline extends Model
         'shipped' => 15,
         'address issue' => 16,
         'artwork issue' => 17,
-        'queued reprint' => 18
+        'queued reprint' => 18,
+        'cancelled' => 19,
     ];
 
     // relationships

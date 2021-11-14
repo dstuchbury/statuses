@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\Types\Integer;
 use Throwable;
 
 /**
@@ -71,7 +72,8 @@ class Order extends Model
         15 => 'shipped',
         16 => 'address issue',
         17 => 'artwork issue',
-        18 => 'queued reprint'
+        18 => 'queued reprint',
+        19 => 'cancelled',
     ];
 
     public const STATUS_NAMES = [
@@ -92,7 +94,8 @@ class Order extends Model
         'shipped' => 15,
         'address issue' => 16,
         'artwork issue' => 17,
-        'queued reprint' => 18
+        'queued reprint' => 18,
+        'cancelled' => 19,
     ];
 
     // Relationships
@@ -104,6 +107,15 @@ class Order extends Model
     public function getStatus(): string
     {
         return $this::STATUS[$this->status];
+    }
+
+    public static function getIdForStatus($status): int
+    {
+        try {
+            return self::STATUS_NAMES[$status];
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     public function setStatus($description): bool

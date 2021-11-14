@@ -20,4 +20,43 @@ class OrderFactory extends Factory
             'price_total_net' => $this->faker->numberBetween(100, 200000),
         ];
     }
+
+    /**
+     * Indicate that an order is shipped
+     * @return Factory
+     */
+    public function shipped(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'status' => Order::getIdForStatus('shipped')
+            ];
+        });
+    }
+
+    /**
+     * Indicate that an order is ready
+     * @return Factory
+     */
+    public function ready(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'status' => Order::getIdForStatus('ready')
+            ];
+        });
+    }
+
+    /**
+     * Indicate that an order is cancelled
+     * @return Factory
+     */
+    public function cancelled(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'status' => Order::getIdForStatus('cancelled')
+            ];
+        });
+    }
 }

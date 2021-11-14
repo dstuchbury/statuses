@@ -49,7 +49,8 @@ class Order extends Model
         'status',
         'order_ref',
         'date_received',
-        'date_sla'
+        'date_sla',
+        'price_total_net',
     ];
 
     public const STATUS = [

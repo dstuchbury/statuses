@@ -17,8 +17,8 @@ class PrintController extends Controller
             return $orderline;
         }
 
-        if (! $request->input('barcode')) {
-            return EndeavourResponse::notFound(sprintf('Machine %s not found', $request->input('barcode')));
+        if (! $request->input('machine_id')) {
+            return EndeavourResponse::notFound(sprintf('Machine %s not found', $request->input('machine_id')));
         }
 
         if (! $orderline->isPrintable()) {

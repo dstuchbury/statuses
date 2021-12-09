@@ -44,6 +44,7 @@ class OrderlineController extends Controller
     public function update(OrderlineRequest $request, Orderline $orderline)
     {
         // Do the updates
+        $validated = $request->validated();
 
         // Remove this if the orderline already loads the order elsewhere in this method!
         $orderline->load('order');

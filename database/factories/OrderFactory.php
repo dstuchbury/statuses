@@ -5,11 +5,13 @@ namespace Database\Factories;
 use App\Models\Order;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use JetBrains\PhpStorm\ArrayShape;
 
 class OrderFactory extends Factory
 {
     protected $model = Order::class;
 
+    #[ArrayShape(['order_ref' => "int", 'date_received' => "string", 'date_sla' => "string", 'status' => "int", 'price_total_net' => "int"])]
     public function definition(): array
     {
         return [

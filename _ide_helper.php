@@ -1,4 +1,21 @@
-<?php
+<?php /** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
+/** @noinspection ALL */
 // @formatter:off
 
 /**
@@ -12,15 +29,7 @@
  */
 
     namespace Illuminate\Support\Facades {
-
-        use Closure;
-        use Countable;
-        use Illuminate\Contracts\Support\Htmlable;
-        use Illuminate\View\Factory;
-        use InvalidArgumentException;
-        use stdClass;
-
-        /**
+            /**
      *
      *
      * @see \Illuminate\Contracts\Foundation\Application
@@ -52,7 +61,7 @@
                     /**
          * Register a callback to run after loading the environment.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -65,7 +74,7 @@
          * Register a callback to run before a bootstrapper.
          *
          * @param string $bootstrapper
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -78,7 +87,7 @@
          * Register a callback to run after a bootstrapper.
          *
          * @param string $bootstrapper
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -371,7 +380,7 @@
                     /**
          * Detect the application's current environment.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return string
          * @static
          */
@@ -996,7 +1005,7 @@
          * Register a binding with the container.
          *
          * @param string $abstract
-         * @param Closure|string|null $concrete
+         * @param \Closure|string|null $concrete
          * @param bool $shared
          * @return void
          * @throws \TypeError
@@ -1023,7 +1032,7 @@
          * Bind a callback to resolve with Container::call.
          *
          * @param array|string $method
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -1050,7 +1059,7 @@
          *
          * @param string $concrete
          * @param string $abstract
-         * @param Closure|string $implementation
+         * @param \Closure|string $implementation
          * @return void
          * @static
          */
@@ -1063,7 +1072,7 @@
          * Register a binding if it hasn't already been registered.
          *
          * @param string $abstract
-         * @param Closure|string|null $concrete
+         * @param \Closure|string|null $concrete
          * @param bool $shared
          * @return void
          * @static
@@ -1077,7 +1086,7 @@
          * Register a shared binding in the container.
          *
          * @param string $abstract
-         * @param Closure|string|null $concrete
+         * @param \Closure|string|null $concrete
          * @return void
          * @static
          */
@@ -1090,7 +1099,7 @@
          * Register a shared binding if it hasn't already been registered.
          *
          * @param string $abstract
-         * @param Closure|string|null $concrete
+         * @param \Closure|string|null $concrete
          * @return void
          * @static
          */
@@ -1103,7 +1112,7 @@
          * Register a scoped binding in the container.
          *
          * @param string $abstract
-         * @param Closure|string|null $concrete
+         * @param \Closure|string|null $concrete
          * @return void
          * @static
          */
@@ -1116,7 +1125,7 @@
          * Register a scoped binding if it hasn't already been registered.
          *
          * @param string $abstract
-         * @param Closure|string|null $concrete
+         * @param \Closure|string|null $concrete
          * @return void
          * @static
          */
@@ -1129,9 +1138,9 @@
          * "Extend" an abstract type in the container.
          *
          * @param string $abstract
-         * @param Closure $closure
+         * @param \Closure $closure
          * @return void
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function extend($abstract, $closure)
@@ -1195,7 +1204,7 @@
          * Bind a new callback to an abstract's rebind event.
          *
          * @param string $abstract
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return mixed
          * @static
          */
@@ -1221,9 +1230,9 @@
                     /**
          * Wrap the given closure such that its dependencies will be injected when executed.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @param array $parameters
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function wrap($callback, $parameters = [])
@@ -1238,7 +1247,7 @@
          * @param \Illuminate\Container\array<string,  mixed>  $parameters
          * @param string|null $defaultMethod
          * @return mixed
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function call($callback, $parameters = [], $defaultMethod = null)
@@ -1250,7 +1259,7 @@
          * Get a closure to resolve the given type from the container.
          *
          * @param string $abstract
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function factory($abstract)
@@ -1290,7 +1299,7 @@
                     /**
          * Instantiate a concrete instance of the given type.
          *
-         * @param Closure|string $concrete
+         * @param \Closure|string $concrete
          * @return mixed
          * @throws \Illuminate\Contracts\Container\BindingResolutionException
          * @throws \Illuminate\Contracts\Container\CircularDependencyException
@@ -1304,8 +1313,8 @@
                     /**
          * Register a new before resolving callback for all types.
          *
-         * @param Closure|string $abstract
-         * @param Closure|null $callback
+         * @param \Closure|string $abstract
+         * @param \Closure|null $callback
          * @return void
          * @static
          */
@@ -1317,8 +1326,8 @@
                     /**
          * Register a new resolving callback.
          *
-         * @param Closure|string $abstract
-         * @param Closure|null $callback
+         * @param \Closure|string $abstract
+         * @param \Closure|null $callback
          * @return void
          * @static
          */
@@ -1330,8 +1339,8 @@
                     /**
          * Register a new after resolving callback for all types.
          *
-         * @param Closure|string $abstract
-         * @param Closure|null $callback
+         * @param \Closure|string $abstract
+         * @param \Closure|null $callback
          * @return void
          * @static
          */
@@ -1517,7 +1526,7 @@
          * Register a Closure based command with the application.
          *
          * @param string $signature
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Foundation\Console\ClosureCommand
          * @static
          */
@@ -1711,7 +1720,7 @@
                     /**
          * Get the user resolver callback.
          *
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function userResolver()
@@ -1722,7 +1731,7 @@
                     /**
          * Set the callback to be used to resolve users.
          *
-         * @param Closure $userResolver
+         * @param \Closure $userResolver
          * @return \Illuminate\Auth\AuthManager
          * @static
          */
@@ -1735,7 +1744,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Auth\AuthManager
          * @static
          */
@@ -1748,7 +1757,7 @@
          * Register a custom provider creator Closure.
          *
          * @param string $name
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Auth\AuthManager
          * @static
          */
@@ -1796,7 +1805,7 @@
          *
          * @param string|null $provider
          * @return \Illuminate\Contracts\Auth\UserProvider|null
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function createUserProvider($provider = null)
@@ -2491,7 +2500,7 @@
          * @param string $name
          * @param callable $handler
          * @return void
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function directive($name, $handler)
@@ -2807,7 +2816,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Broadcasting\BroadcastManager
          * @static
          */
@@ -3011,7 +3020,7 @@
                     /**
          * Assert if a job was dispatched based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -3037,7 +3046,7 @@
                     /**
          * Determine if a job was dispatched based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|null $callback
          * @return void
          * @static
@@ -3061,7 +3070,7 @@
                     /**
          * Assert if a job was explicitly dispatched synchronously based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -3087,7 +3096,7 @@
                     /**
          * Determine if a job was dispatched based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|null $callback
          * @return void
          * @static
@@ -3100,7 +3109,7 @@
                     /**
          * Assert if a job was dispatched after the response was sent based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -3126,7 +3135,7 @@
                     /**
          * Determine if a job was dispatched based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|null $callback
          * @return void
          * @static
@@ -3151,7 +3160,7 @@
                     /**
          * Assert if a job was dispatched with an empty chain based on a truth-test callback.
          *
-         * @param string|Closure $command
+         * @param string|\Closure $command
          * @param callable|null $callback
          * @return void
          * @static
@@ -3379,7 +3388,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Cache\CacheManager
          * @static
          */
@@ -3592,7 +3601,7 @@
          *
          * @param string $key
          * @param \DateTimeInterface|\DateInterval|int|null $ttl
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return mixed
          * @static
          */
@@ -3605,7 +3614,7 @@
          * Get an item from the cache, or execute the given Closure and store the result forever.
          *
          * @param string $key
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return mixed
          * @static
          */
@@ -3618,7 +3627,7 @@
          * Get an item from the cache, or execute the given Closure and store the result forever.
          *
          * @param string $key
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return mixed
          * @static
          */
@@ -4458,7 +4467,7 @@
          *
          * @param mixed $handler
          * @return mixed
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function use($handler)
@@ -4742,7 +4751,7 @@
                     /**
          * Begin a fluent query against a database table.
          *
-         * @param Closure|\Illuminate\Database\Query\Builder|string $table
+         * @param \Closure|\Illuminate\Database\Query\Builder|string $table
          * @param string|null $as
          * @return \Illuminate\Database\Query\Builder
          * @static
@@ -4898,7 +4907,7 @@
                     /**
          * Execute the given callback in "dry run" mode.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return array
          * @static
          */
@@ -4949,7 +4958,7 @@
                     /**
          * Register a hook to be run just before a database query is executed.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Database\MySqlConnection
          * @static
          */
@@ -4961,7 +4970,7 @@
                     /**
          * Register a database query listener with the connection.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -5100,7 +5109,7 @@
                     /**
          * Get the current PDO connection parameter without executing any reconnect logic.
          *
-         * @return \PDO|Closure|null
+         * @return \PDO|\Closure|null
          * @static
          */
         public static function getRawPdo()
@@ -5122,7 +5131,7 @@
                     /**
          * Get the current read PDO connection parameter without executing any reconnect logic.
          *
-         * @return \PDO|Closure|null
+         * @return \PDO|\Closure|null
          * @static
          */
         public static function getRawReadPdo()
@@ -5133,7 +5142,7 @@
                     /**
          * Set the PDO connection.
          *
-         * @param \PDO|Closure|null $pdo
+         * @param \PDO|\Closure|null $pdo
          * @return \Illuminate\Database\MySqlConnection
          * @static
          */
@@ -5145,7 +5154,7 @@
                     /**
          * Set the PDO connection used for reading.
          *
-         * @param \PDO|Closure|null $pdo
+         * @param \PDO|\Closure|null $pdo
          * @return \Illuminate\Database\MySqlConnection
          * @static
          */
@@ -5465,7 +5474,7 @@
          * Register a connection resolver.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -5487,7 +5496,7 @@
                     /**
          * Execute a Closure within a transaction.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @param int $attempts
          * @return mixed
          * @throws \Throwable
@@ -5570,8 +5579,8 @@
                     /**
          * Register an event listener with the dispatcher.
          *
-         * @param Closure|string|array $events
-         * @param Closure|string|array|null $listener
+         * @param \Closure|string|array $events
+         * @param \Closure|string|array|null $listener
          * @return void
          * @static
          */
@@ -5683,9 +5692,9 @@
                     /**
          * Register an event listener with the dispatcher.
          *
-         * @param Closure|string|array $listener
+         * @param \Closure|string|array $listener
          * @param bool $wildcard
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function makeListener($listener, $wildcard = false)
@@ -5698,7 +5707,7 @@
          *
          * @param string $listener
          * @param bool $wildcard
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function createClassListener($listener, $wildcard = false)
@@ -5793,7 +5802,7 @@
                     /**
          * Assert if an event was dispatched based on a truth-test callback.
          *
-         * @param string|Closure $event
+         * @param string|\Closure $event
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -5819,7 +5828,7 @@
                     /**
          * Determine if an event was dispatched based on a truth-test callback.
          *
-         * @param string|Closure $event
+         * @param string|\Closure $event
          * @param callable|null $callback
          * @return void
          * @static
@@ -6487,7 +6496,7 @@
          * @param string $ability
          * @param callable|string $callback
          * @return \Illuminate\Auth\Access\Gate
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function define($ability, $callback)
@@ -6844,7 +6853,7 @@
          *
          * @param string|null $driver
          * @return mixed
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function driver($driver = null)
@@ -6856,7 +6865,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Hashing\HashManager
          * @static
          */
@@ -7226,7 +7235,7 @@
          * Get a translation according to an integer value.
          *
          * @param string $key
-         * @param Countable|int|array $number
+         * @param \Countable|int|array $number
          * @param array $replace
          * @param string|null $locale
          * @return string
@@ -7363,7 +7372,7 @@
          *
          * @param string $locale
          * @return void
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function setLocale($locale)
@@ -7474,7 +7483,7 @@
      * @method static \Illuminate\Log\Logger withContext(array $context = [])
      * @method static \Illuminate\Log\Logger withoutContext()
      * @method static void write(string $level, string $message, array $context = [])
-     * @method static void listen(Closure $callback)
+     * @method static void listen(\Closure $callback)
      * @see \Illuminate\Log\Logger
      */
         class Log {
@@ -7565,7 +7574,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Log\LogManager
          * @static
          */
@@ -7757,7 +7766,7 @@
          *
          * @param array $config
          * @return \Swift_Transport
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function createTransport($config)
@@ -7804,7 +7813,7 @@
          * Register a custom transport creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Mail\MailManager
          * @static
          */
@@ -7850,7 +7859,7 @@
                     /**
          * Assert if a mailable was sent based on a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -7863,7 +7872,7 @@
                     /**
          * Determine if a mailable was not sent or queued to be sent based on a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|null $callback
          * @return void
          * @static
@@ -7876,7 +7885,7 @@
                     /**
          * Determine if a mailable was not sent based on a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|null $callback
          * @return void
          * @static
@@ -7911,7 +7920,7 @@
                     /**
          * Assert if a mailable was queued based on a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -7924,7 +7933,7 @@
                     /**
          * Determine if a mailable was not queued based on a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|null $callback
          * @return void
          * @static
@@ -7948,7 +7957,7 @@
                     /**
          * Get all of the mailables matching a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|null $callback
          * @return \Illuminate\Support\Collection
          * @static
@@ -7973,7 +7982,7 @@
                     /**
          * Get all of the queued mailables matching a truth-test callback.
          *
-         * @param string|Closure $mailable
+         * @param string|\Closure $mailable
          * @param callable|null $callback
          * @return \Illuminate\Support\Collection
          * @static
@@ -8023,7 +8032,7 @@
          * Send a new message with only a raw text part.
          *
          * @param string $text
-         * @param Closure|string $callback
+         * @param \Closure|string $callback
          * @return void
          * @static
          */
@@ -8037,7 +8046,7 @@
          *
          * @param \Illuminate\Contracts\Mail\Mailable|string|array $view
          * @param array $data
-         * @param Closure|string|null $callback
+         * @param \Closure|string|null $callback
          * @return void
          * @static
          */
@@ -8182,7 +8191,7 @@
          *
          * @param string|null $driver
          * @return mixed
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function driver($driver = null)
@@ -8194,7 +8203,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Notifications\ChannelManager
          * @static
          */
@@ -8251,7 +8260,7 @@
                     /**
          * Assert if a notification was sent on-demand based on a truth-test callback.
          *
-         * @param string|Closure $notification
+         * @param string|\Closure $notification
          * @param callable|null $callback
          * @return void
          * @throws \Exception
@@ -8266,7 +8275,7 @@
          * Assert if a notification was sent based on a truth-test callback.
          *
          * @param mixed $notifiable
-         * @param string|Closure $notification
+         * @param string|\Closure $notification
          * @param callable|null $callback
          * @return void
          * @throws \Exception
@@ -8308,7 +8317,7 @@
          * Determine if a notification was sent based on a truth-test callback.
          *
          * @param mixed $notifiable
-         * @param string|Closure $notification
+         * @param string|\Closure $notification
          * @param callable|null $callback
          * @return void
          * @throws \Exception
@@ -8411,8 +8420,8 @@
             /**
      *
      *
-     * @method static mixed reset(array $credentials, Closure $callback)
-     * @method static string sendResetLink(array $credentials, Closure $callback = null)
+     * @method static mixed reset(array $credentials, \Closure $callback)
+     * @method static string sendResetLink(array $credentials, \Closure $callback = null)
      * @method static \Illuminate\Contracts\Auth\CanResetPassword getUser(array $credentials)
      * @method static string createToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
      * @method static void deleteToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
@@ -8565,7 +8574,7 @@
          * Add a queue connection resolver.
          *
          * @param string $driver
-         * @param Closure $resolver
+         * @param \Closure $resolver
          * @return void
          * @static
          */
@@ -8578,7 +8587,7 @@
          * Add a queue connection resolver.
          *
          * @param string $driver
-         * @param Closure $resolver
+         * @param \Closure $resolver
          * @return void
          * @static
          */
@@ -8648,7 +8657,7 @@
                     /**
          * Assert if a job was pushed based on a truth-test callback.
          *
-         * @param string|Closure $job
+         * @param string|\Closure $job
          * @param callable|int|null $callback
          * @return void
          * @static
@@ -8662,7 +8671,7 @@
          * Assert if a job was pushed based on a truth-test callback.
          *
          * @param string $queue
-         * @param string|Closure $job
+         * @param string|\Closure $job
          * @param callable|null $callback
          * @return void
          * @static
@@ -8702,7 +8711,7 @@
                     /**
          * Determine if a job was pushed based on a truth-test callback.
          *
-         * @param string|Closure $job
+         * @param string|\Closure $job
          * @param callable|null $callback
          * @return void
          * @static
@@ -8962,7 +8971,7 @@
          * Register a named limiter configuration.
          *
          * @param string $name
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Cache\RateLimiter
          * @static
          */
@@ -8975,7 +8984,7 @@
          * Get the given named rate limiter.
          *
          * @param string $name
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function limiter($name)
@@ -8988,7 +8997,7 @@
          *
          * @param string $key
          * @param int $maxAttempts
-         * @param Closure $callback
+         * @param \Closure $callback
          * @param int $decaySeconds
          * @return mixed
          * @static
@@ -9800,7 +9809,7 @@
                     /**
          * Get the user resolver callback.
          *
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function getUserResolver()
@@ -9811,7 +9820,7 @@
                     /**
          * Set the user resolver callback.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Http\Request
          * @static
          */
@@ -9823,7 +9832,7 @@
                     /**
          * Get the route resolver callback.
          *
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function getRouteResolver()
@@ -9834,7 +9843,7 @@
                     /**
          * Set the route resolver callback.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Http\Request
          * @static
          */
@@ -11492,7 +11501,7 @@
                     /**
          * Create a new streamed response instance.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @param int $status
          * @param array $headers
          * @return \Symfony\Component\HttpFoundation\StreamedResponse
@@ -11506,7 +11515,7 @@
                     /**
          * Create a new streamed response instance as a file download.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @param string|null $name
          * @param array $headers
          * @param string|null $disposition
@@ -11890,7 +11899,7 @@
          * Create a route group with shared attributes.
          *
          * @param array $attributes
-         * @param Closure|string $routes
+         * @param \Closure|string $routes
          * @return void
          * @static
          */
@@ -12181,7 +12190,7 @@
          *
          * @param string $key
          * @param string $class
-         * @param Closure|null $callback
+         * @param \Closure|null $callback
          * @return void
          * @static
          */
@@ -12194,7 +12203,7 @@
          * Get the binding callback for a given binding.
          *
          * @param string $key
-         * @return Closure|null
+         * @return \Closure|null
          * @static
          */
         public static function getBindingCallback($key)
@@ -12648,7 +12657,7 @@
          *
          * @param string $type
          * @return void
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function defaultMorphKeyType($type)
@@ -12708,7 +12717,7 @@
          * Modify a table on the schema.
          *
          * @param string $table
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -12721,7 +12730,7 @@
          * Create a new table on the schema.
          *
          * @param string $table
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return void
          * @static
          */
@@ -12856,7 +12865,7 @@
                     /**
          * Set the Schema Blueprint resolver callback.
          *
-         * @param Closure $resolver
+         * @param \Closure $resolver
          * @return void
          * @static
          */
@@ -12935,7 +12944,7 @@
          *
          * @param string|null $driver
          * @return mixed
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function driver($driver = null)
@@ -12947,7 +12956,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Session\SessionManager
          * @static
          */
@@ -13173,7 +13182,7 @@
          * Get an item from the session, or store the default value.
          *
          * @param string $key
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return mixed
          * @static
          */
@@ -13689,7 +13698,7 @@
          * Register a custom driver creator Closure.
          *
          * @param string $driver
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Filesystem\FilesystemManager
          * @static
          */
@@ -14006,7 +14015,7 @@
          * @param resource $resource
          * @param array $options
          * @return bool
-         * @throws InvalidArgumentException If $resource is not a file handle.
+         * @throws \InvalidArgumentException If $resource is not a file handle.
          * @throws \Illuminate\Contracts\Filesystem\FileExistsException
          * @static
          */
@@ -14319,7 +14328,7 @@
          * @param \DateTimeInterface|\DateInterval|int|null $expiration
          * @param bool $absolute
          * @return string
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function signedRoute($name, $parameters = [], $expiration = null, $absolute = true)
@@ -14429,7 +14438,7 @@
          * @param mixed $parameters
          * @param bool $absolute
          * @return string
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function action($action, $parameters = [], $absolute = true)
@@ -14538,7 +14547,7 @@
                     /**
          * Set a callback to be used to format the host of generated URLs.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Routing\UrlGenerator
          * @static
          */
@@ -14550,7 +14559,7 @@
                     /**
          * Set a callback to be used to format the path of generated URLs.
          *
-         * @param Closure $callback
+         * @param \Closure $callback
          * @return \Illuminate\Routing\UrlGenerator
          * @static
          */
@@ -14562,7 +14571,7 @@
                     /**
          * Get the path formatter being used by the URL generator.
          *
-         * @return Closure
+         * @return \Closure
          * @static
          */
         public static function pathFormatter()
@@ -14720,7 +14729,7 @@
          * Register a custom validator extension.
          *
          * @param string $rule
-         * @param Closure|string $extension
+         * @param \Closure|string $extension
          * @param string|null $message
          * @return void
          * @static
@@ -14734,7 +14743,7 @@
          * Register a custom implicit validator extension.
          *
          * @param string $rule
-         * @param Closure|string $extension
+         * @param \Closure|string $extension
          * @param string|null $message
          * @return void
          * @static
@@ -14748,7 +14757,7 @@
          * Register a custom dependent validator extension.
          *
          * @param string $rule
-         * @param Closure|string $extension
+         * @param \Closure|string $extension
          * @param string|null $message
          * @return void
          * @static
@@ -14762,7 +14771,7 @@
          * Register a custom validator message replacer.
          *
          * @param string $rule
-         * @param Closure|string $replacer
+         * @param \Closure|string $replacer
          * @return void
          * @static
          */
@@ -14785,7 +14794,7 @@
                     /**
          * Set the Validator instance resolver.
          *
-         * @param Closure $resolver
+         * @param \Closure $resolver
          * @return void
          * @static
          */
@@ -14870,7 +14879,7 @@
          */
         public static function file($path, $data = [], $mergeData = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->file($path, $data, $mergeData);
         }
                     /**
@@ -14884,7 +14893,7 @@
          */
         public static function make($view, $data = [], $mergeData = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->make($view, $data, $mergeData);
         }
                     /**
@@ -14894,12 +14903,12 @@
          * @param \Illuminate\Contracts\Support\Arrayable|array $data
          * @param array $mergeData
          * @return \Illuminate\Contracts\View\View
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function first($views, $data = [], $mergeData = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->first($views, $data, $mergeData);
         }
                     /**
@@ -14914,7 +14923,7 @@
          */
         public static function renderWhen($condition, $view, $data = [], $mergeData = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->renderWhen($condition, $view, $data, $mergeData);
         }
                     /**
@@ -14929,7 +14938,7 @@
          */
         public static function renderEach($view, $data, $iterator, $empty = 'raw|')
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->renderEach($view, $data, $iterator, $empty);
         }
                     /**
@@ -14941,7 +14950,7 @@
          */
         public static function exists($view)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->exists($view);
         }
                     /**
@@ -14949,12 +14958,12 @@
          *
          * @param string $path
          * @return \Illuminate\Contracts\View\Engine
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function getEngineFromPath($path)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getEngineFromPath($path);
         }
                     /**
@@ -14967,7 +14976,7 @@
          */
         public static function share($key, $value = null)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->share($key, $value);
         }
                     /**
@@ -14978,7 +14987,7 @@
          */
         public static function incrementRender()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->incrementRender();
         }
                     /**
@@ -14989,7 +14998,7 @@
          */
         public static function decrementRender()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->decrementRender();
         }
                     /**
@@ -15000,7 +15009,7 @@
          */
         public static function doneRendering()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->doneRendering();
         }
                     /**
@@ -15012,7 +15021,7 @@
          */
         public static function hasRenderedOnce($id)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->hasRenderedOnce($id);
         }
                     /**
@@ -15024,7 +15033,7 @@
          */
         public static function markAsRenderedOnce($id)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->markAsRenderedOnce($id);
         }
                     /**
@@ -15036,7 +15045,7 @@
          */
         public static function addLocation($location)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->addLocation($location);
         }
                     /**
@@ -15044,12 +15053,12 @@
          *
          * @param string $namespace
          * @param string|array $hints
-         * @return Factory
+         * @return \Illuminate\View\Factory
          * @static
          */
         public static function addNamespace($namespace, $hints)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->addNamespace($namespace, $hints);
         }
                     /**
@@ -15057,12 +15066,12 @@
          *
          * @param string $namespace
          * @param string|array $hints
-         * @return Factory
+         * @return \Illuminate\View\Factory
          * @static
          */
         public static function prependNamespace($namespace, $hints)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->prependNamespace($namespace, $hints);
         }
                     /**
@@ -15070,12 +15079,12 @@
          *
          * @param string $namespace
          * @param string|array $hints
-         * @return Factory
+         * @return \Illuminate\View\Factory
          * @static
          */
         public static function replaceNamespace($namespace, $hints)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->replaceNamespace($namespace, $hints);
         }
                     /**
@@ -15083,13 +15092,13 @@
          *
          * @param string $extension
          * @param string $engine
-         * @param Closure|null $resolver
+         * @param \Closure|null $resolver
          * @return void
          * @static
          */
         public static function addExtension($extension, $engine, $resolver = null)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->addExtension($extension, $engine, $resolver);
         }
                     /**
@@ -15100,7 +15109,7 @@
          */
         public static function flushState()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->flushState();
         }
                     /**
@@ -15111,7 +15120,7 @@
          */
         public static function flushStateIfDoneRendering()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->flushStateIfDoneRendering();
         }
                     /**
@@ -15122,7 +15131,7 @@
          */
         public static function getExtensions()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getExtensions();
         }
                     /**
@@ -15133,7 +15142,7 @@
          */
         public static function getEngineResolver()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getEngineResolver();
         }
                     /**
@@ -15144,7 +15153,7 @@
          */
         public static function getFinder()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getFinder();
         }
                     /**
@@ -15156,7 +15165,7 @@
          */
         public static function setFinder($finder)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->setFinder($finder);
         }
                     /**
@@ -15167,7 +15176,7 @@
          */
         public static function flushFinderCache()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->flushFinderCache();
         }
                     /**
@@ -15178,7 +15187,7 @@
          */
         public static function getDispatcher()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getDispatcher();
         }
                     /**
@@ -15190,7 +15199,7 @@
          */
         public static function setDispatcher($events)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->setDispatcher($events);
         }
                     /**
@@ -15201,7 +15210,7 @@
          */
         public static function getContainer()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getContainer();
         }
                     /**
@@ -15213,7 +15222,7 @@
          */
         public static function setContainer($container)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->setContainer($container);
         }
                     /**
@@ -15226,7 +15235,7 @@
          */
         public static function shared($key, $default = null)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->shared($key, $default);
         }
                     /**
@@ -15237,7 +15246,7 @@
          */
         public static function getShared()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getShared();
         }
                     /**
@@ -15250,7 +15259,7 @@
          */
         public static function macro($name, $macro)
         {
-                        Factory::macro($name, $macro);
+                        \Illuminate\View\Factory::macro($name, $macro);
         }
                     /**
          * Mix another object into the class.
@@ -15263,7 +15272,7 @@
          */
         public static function mixin($mixin, $replace = true)
         {
-                        Factory::mixin($mixin, $replace);
+                        \Illuminate\View\Factory::mixin($mixin, $replace);
         }
                     /**
          * Checks if macro is registered.
@@ -15274,19 +15283,19 @@
          */
         public static function hasMacro($name)
         {
-                        return Factory::hasMacro($name);
+                        return \Illuminate\View\Factory::hasMacro($name);
         }
                     /**
          * Start a component rendering process.
          *
-         * @param \Illuminate\Contracts\View\View|Htmlable|Closure|string $view
+         * @param \Illuminate\Contracts\View\View|\Illuminate\Contracts\Support\Htmlable|\Closure|string $view
          * @param array $data
          * @return void
          * @static
          */
         public static function startComponent($view, $data = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->startComponent($view, $data);
         }
                     /**
@@ -15299,7 +15308,7 @@
          */
         public static function startComponentFirst($names, $data = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->startComponentFirst($names, $data);
         }
                     /**
@@ -15310,7 +15319,7 @@
          */
         public static function renderComponent()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->renderComponent();
         }
                     /**
@@ -15323,7 +15332,7 @@
          */
         public static function getConsumableComponentData($key, $default = null)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getConsumableComponentData($key, $default);
         }
                     /**
@@ -15337,7 +15346,7 @@
          */
         public static function slot($name, $content = null, $attributes = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->slot($name, $content, $attributes);
         }
                     /**
@@ -15348,20 +15357,20 @@
          */
         public static function endSlot()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->endSlot();
         }
                     /**
          * Register a view creator event.
          *
          * @param array|string $views
-         * @param Closure|string $callback
+         * @param \Closure|string $callback
          * @return array
          * @static
          */
         public static function creator($views, $callback)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->creator($views, $callback);
         }
                     /**
@@ -15373,20 +15382,20 @@
          */
         public static function composers($composers)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->composers($composers);
         }
                     /**
          * Register a view composer event.
          *
          * @param array|string $views
-         * @param Closure|string $callback
+         * @param \Closure|string $callback
          * @return array
          * @static
          */
         public static function composer($views, $callback)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->composer($views, $callback);
         }
                     /**
@@ -15398,7 +15407,7 @@
          */
         public static function callComposer($view)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->callComposer($view);
         }
                     /**
@@ -15410,7 +15419,7 @@
          */
         public static function callCreator($view)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->callCreator($view);
         }
                     /**
@@ -15423,7 +15432,7 @@
          */
         public static function startSection($section, $content = null)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->startSection($section, $content);
         }
                     /**
@@ -15436,7 +15445,7 @@
          */
         public static function inject($section, $content)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->inject($section, $content);
         }
                     /**
@@ -15447,7 +15456,7 @@
          */
         public static function yieldSection()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->yieldSection();
         }
                     /**
@@ -15455,24 +15464,24 @@
          *
          * @param bool $overwrite
          * @return string
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function stopSection($overwrite = false)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->stopSection($overwrite);
         }
                     /**
          * Stop injecting content into a section and append it.
          *
          * @return string
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function appendSection()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->appendSection();
         }
                     /**
@@ -15485,7 +15494,7 @@
          */
         public static function yieldContent($section, $default = '')
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->yieldContent($section, $default);
         }
                     /**
@@ -15497,7 +15506,7 @@
          */
         public static function parentPlaceholder($section = '')
         {
-                        return Factory::parentPlaceholder($section);
+                        return \Illuminate\View\Factory::parentPlaceholder($section);
         }
                     /**
          * Check if the section exists.
@@ -15508,7 +15517,7 @@
          */
         public static function hasSection($name)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->hasSection($name);
         }
                     /**
@@ -15520,7 +15529,7 @@
          */
         public static function sectionMissing($name)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->sectionMissing($name);
         }
                     /**
@@ -15533,7 +15542,7 @@
          */
         public static function getSection($name, $default = null)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getSection($name, $default);
         }
                     /**
@@ -15544,7 +15553,7 @@
          */
         public static function getSections()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getSections();
         }
                     /**
@@ -15555,19 +15564,19 @@
          */
         public static function flushSections()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->flushSections();
         }
                     /**
          * Add new loop to the stack.
          *
-         * @param Countable|array $data
+         * @param \Countable|array $data
          * @return void
          * @static
          */
         public static function addLoop($data)
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->addLoop($data);
         }
                     /**
@@ -15578,7 +15587,7 @@
          */
         public static function incrementLoopIndices()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->incrementLoopIndices();
         }
                     /**
@@ -15589,18 +15598,18 @@
          */
         public static function popLoop()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->popLoop();
         }
                     /**
          * Get an instance of the last loop in the stack.
          *
-         * @return stdClass|null
+         * @return \stdClass|null
          * @static
          */
         public static function getLastLoop()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getLastLoop();
         }
                     /**
@@ -15611,7 +15620,7 @@
          */
         public static function getLoopStack()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->getLoopStack();
         }
                     /**
@@ -15624,19 +15633,19 @@
          */
         public static function startPush($section, $content = '')
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->startPush($section, $content);
         }
                     /**
          * Stop injecting content into a push section.
          *
          * @return string
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function stopPush()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->stopPush();
         }
                     /**
@@ -15649,19 +15658,19 @@
          */
         public static function startPrepend($section, $content = '')
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->startPrepend($section, $content);
         }
                     /**
          * Stop prepending content into a push section.
          *
          * @return string
-         * @throws InvalidArgumentException
+         * @throws \InvalidArgumentException
          * @static
          */
         public static function stopPrepend()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->stopPrepend();
         }
                     /**
@@ -15674,7 +15683,7 @@
          */
         public static function yieldPushContent($section, $default = '')
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->yieldPushContent($section, $default);
         }
                     /**
@@ -15685,7 +15694,7 @@
          */
         public static function flushStacks()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->flushStacks();
         }
                     /**
@@ -15697,7 +15706,7 @@
          */
         public static function startTranslation($replacements = [])
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         $instance->startTranslation($replacements);
         }
                     /**
@@ -15708,7 +15717,7 @@
          */
         public static function renderTranslation()
         {
-                        /** @var Factory $instance */
+                        /** @var \Illuminate\View\Factory $instance */
                         return $instance->renderTranslation();
         }
 
@@ -16049,7 +16058,7 @@
          */
         public static function validate($rules, ...$params)
         {
-                        return Request::validate($rules, ...$params);
+                        return \Illuminate\Http\Request::validate($rules, ...$params);
         }
                     /**
          *
@@ -16062,7 +16071,7 @@
          */
         public static function validateWithBag($errorBag, $rules, ...$params)
         {
-                        return Request::validateWithBag($errorBag, $rules, ...$params);
+                        return \Illuminate\Http\Request::validateWithBag($errorBag, $rules, ...$params);
         }
                     /**
          *
@@ -16073,7 +16082,7 @@
          */
         public static function hasValidSignature($absolute = true)
         {
-                        return Request::hasValidSignature($absolute);
+                        return \Illuminate\Http\Request::hasValidSignature($absolute);
         }
                     /**
          *
@@ -16083,7 +16092,7 @@
          */
         public static function hasValidRelativeSignature()
         {
-                        return Request::hasValidRelativeSignature();
+                        return \Illuminate\Http\Request::hasValidRelativeSignature();
         }
 
     }
@@ -16092,28 +16101,7 @@
 
 
 namespace  {
-
-    use Illuminate\Contracts\Pagination\CursorPaginator;
-    use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-    use Illuminate\Contracts\Pagination\Paginator;
-    use Illuminate\Contracts\Support\Arrayable;
-    use Illuminate\Database\Eloquent\Model;
-    use Illuminate\Database\Eloquent\ModelNotFoundException;
-    use Illuminate\Database\Eloquent\Relations\MorphTo;
-    use Illuminate\Database\Eloquent\Relations\Relation;
-    use Illuminate\Database\Eloquent\Scope;
-    use Illuminate\Database\MultipleRecordsFoundException;
-    use Illuminate\Database\Query\Builder;
-    use Illuminate\Database\Query\Expression;
-    use Illuminate\Database\Query\Grammars\Grammar;
-    use Illuminate\Database\Query\never;
-    use Illuminate\Database\Query\Processors\Processor;
-    use Illuminate\Database\RecordsNotFoundException;
-    use Illuminate\Pagination\Cursor;
-    use Illuminate\Support\Collection;
-    use Illuminate\Support\LazyCollection;
-
-    class App extends \Illuminate\Support\Facades\App {}
+            class App extends \Illuminate\Support\Facades\App {}
             class Arr extends \Illuminate\Support\Arr {}
             class Artisan extends \Illuminate\Support\Facades\Artisan {}
             class Auth extends \Illuminate\Support\Facades\Auth {}
@@ -16126,12 +16114,12 @@ namespace  {
             class Crypt extends \Illuminate\Support\Facades\Crypt {}
             class Date extends \Illuminate\Support\Facades\Date {}
             class DB extends \Illuminate\Support\Facades\DB {}
-            class Eloquent extends Model {
+            class Eloquent extends \Illuminate\Database\Eloquent\Model {
                 /**
              * Create and return an un-saved model instance.
              *
              * @param array $attributes
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function make($attributes = [])
@@ -16144,7 +16132,7 @@ namespace  {
              * Register a new global scope.
              *
              * @param string $identifier
-             * @param Scope|Closure $scope
+             * @param \Illuminate\Database\Eloquent\Scope|\Closure $scope
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16157,7 +16145,7 @@ namespace  {
                 /**
              * Remove a registered global scope.
              *
-             * @param Scope|string $scope
+             * @param \Illuminate\Database\Eloquent\Scope|string $scope
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16221,7 +16209,7 @@ namespace  {
                 /**
              * Add a basic where clause to the query.
              *
-             * @param Closure|string|array|Expression $column
+             * @param \Closure|string|array|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @param string $boolean
@@ -16237,11 +16225,11 @@ namespace  {
                 /**
              * Add a basic where clause to the query, and return the first result.
              *
-             * @param Closure|string|array|Expression $column
+             * @param \Closure|string|array|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @param string $boolean
-             * @return Model|static|null
+             * @return \Illuminate\Database\Eloquent\Model|static|null
              * @static
              */
             public static function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
@@ -16253,7 +16241,7 @@ namespace  {
                 /**
              * Add an "or where" clause to the query.
              *
-             * @param Closure|array|string|Expression $column
+             * @param \Closure|array|string|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -16268,7 +16256,7 @@ namespace  {
                 /**
              * Add an "order by" clause for a timestamp to the query.
              *
-             * @param string|Expression $column
+             * @param string|\Illuminate\Database\Query\Expression $column
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16281,7 +16269,7 @@ namespace  {
                 /**
              * Add an "order by" clause for a timestamp to the query.
              *
-             * @param string|Expression $column
+             * @param string|\Illuminate\Database\Query\Expression $column
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16323,7 +16311,7 @@ namespace  {
              *
              * @param mixed $id
              * @param array $columns
-             * @return Model|\Illuminate\Database\Eloquent\Collection|static[]|static|null
+             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static[]|static|null
              * @static
              */
             public static function find($id, $columns = [])
@@ -16335,7 +16323,7 @@ namespace  {
                 /**
              * Find multiple models by their primary keys.
              *
-             * @param Arrayable|array $ids
+             * @param \Illuminate\Contracts\Support\Arrayable|array $ids
              * @param array $columns
              * @return \Illuminate\Database\Eloquent\Collection
              * @static
@@ -16351,8 +16339,8 @@ namespace  {
              *
              * @param mixed $id
              * @param array $columns
-             * @return Model|\Illuminate\Database\Eloquent\Collection|static|static[]
-             * @throws ModelNotFoundException
+             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static|static[]
+             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
              * @static
              */
             public static function findOrFail($id, $columns = [])
@@ -16366,7 +16354,7 @@ namespace  {
              *
              * @param mixed $id
              * @param array $columns
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function findOrNew($id, $columns = [])
@@ -16380,7 +16368,7 @@ namespace  {
              *
              * @param array $attributes
              * @param array $values
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function firstOrNew($attributes = [], $values = [])
@@ -16394,7 +16382,7 @@ namespace  {
              *
              * @param array $attributes
              * @param array $values
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function firstOrCreate($attributes = [], $values = [])
@@ -16408,7 +16396,7 @@ namespace  {
              *
              * @param array $attributes
              * @param array $values
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function updateOrCreate($attributes, $values = [])
@@ -16421,8 +16409,8 @@ namespace  {
              * Execute the query and get the first result or throw an exception.
              *
              * @param array $columns
-             * @return Model|static
-             * @throws ModelNotFoundException
+             * @return \Illuminate\Database\Eloquent\Model|static
+             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
              * @static
              */
             public static function firstOrFail($columns = [])
@@ -16434,9 +16422,9 @@ namespace  {
                 /**
              * Execute the query and get the first result or call a callback.
              *
-             * @param Closure|array $columns
-             * @param Closure|null $callback
-             * @return Model|static|mixed
+             * @param \Closure|array $columns
+             * @param \Closure|null $callback
+             * @return \Illuminate\Database\Eloquent\Model|static|mixed
              * @static
              */
             public static function firstOr($columns = [], $callback = null)
@@ -16449,9 +16437,9 @@ namespace  {
              * Execute the query and get the first result if it's the sole matching record.
              *
              * @param array|string $columns
-             * @return Model
-             * @throws ModelNotFoundException
-             * @throws MultipleRecordsFoundException
+             * @return \Illuminate\Database\Eloquent\Model
+             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+             * @throws \Illuminate\Database\MultipleRecordsFoundException
              * @static
              */
             public static function sole($columns = [])
@@ -16463,7 +16451,7 @@ namespace  {
                 /**
              * Get a single column's value from the first result of a query.
              *
-             * @param string|Expression $column
+             * @param string|\Illuminate\Database\Query\Expression $column
              * @return mixed
              * @static
              */
@@ -16476,9 +16464,9 @@ namespace  {
                 /**
              * Get a single column's value from the first result of the query or throw an exception.
              *
-             * @param string|Expression $column
+             * @param string|\Illuminate\Database\Query\Expression $column
              * @return mixed
-             * @throws ModelNotFoundException
+             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
              * @static
              */
             public static function valueOrFail($column)
@@ -16504,7 +16492,7 @@ namespace  {
              * Get the hydrated models without eager loading.
              *
              * @param array|string $columns
-             * @return Model[]|static[]
+             * @return \Illuminate\Database\Eloquent\Model[]|static[]
              * @static
              */
             public static function getModels($columns = [])
@@ -16529,7 +16517,7 @@ namespace  {
                 /**
              * Get a lazy collection for the given query.
              *
-             * @return LazyCollection
+             * @return \Illuminate\Support\LazyCollection
              * @static
              */
             public static function cursor()
@@ -16541,9 +16529,9 @@ namespace  {
                 /**
              * Get an array with the values of a given column.
              *
-             * @param string|Expression $column
+             * @param string|\Illuminate\Database\Query\Expression $column
              * @param string|null $key
-             * @return Collection
+             * @return \Illuminate\Support\Collection
              * @static
              */
             public static function pluck($column, $key = null)
@@ -16559,8 +16547,8 @@ namespace  {
              * @param array $columns
              * @param string $pageName
              * @param int|null $page
-             * @return LengthAwarePaginator
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function paginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
@@ -16576,7 +16564,7 @@ namespace  {
              * @param array $columns
              * @param string $pageName
              * @param int|null $page
-             * @return Paginator
+             * @return \Illuminate\Contracts\Pagination\Paginator
              * @static
              */
             public static function simplePaginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
@@ -16591,8 +16579,8 @@ namespace  {
              * @param int|null $perPage
              * @param array $columns
              * @param string $cursorName
-             * @param Cursor|string|null $cursor
-             * @return CursorPaginator
+             * @param \Illuminate\Pagination\Cursor|string|null $cursor
+             * @return \Illuminate\Contracts\Pagination\CursorPaginator
              * @static
              */
             public static function cursorPaginate($perPage = null, $columns = [], $cursorName = 'cursor', $cursor = null)
@@ -16605,7 +16593,7 @@ namespace  {
              * Save a new model and return the instance.
              *
              * @param array $attributes
-             * @return Model|$this
+             * @return \Illuminate\Database\Eloquent\Model|$this
              * @static
              */
             public static function create($attributes = [])
@@ -16618,7 +16606,7 @@ namespace  {
              * Save a new model and return the instance. Allow mass-assignment.
              *
              * @param array $attributes
-             * @return Model|$this
+             * @return \Illuminate\Database\Eloquent\Model|$this
              * @static
              */
             public static function forceCreate($attributes)
@@ -16645,7 +16633,7 @@ namespace  {
                 /**
              * Register a replacement for the default delete function.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @return void
              * @static
              */
@@ -16710,7 +16698,7 @@ namespace  {
              * Create a new instance of the model being queried.
              *
              * @param array $attributes
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function newModelInstance($attributes = [])
@@ -16735,7 +16723,7 @@ namespace  {
                 /**
              * Get the underlying query builder instance.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function getQuery()
@@ -16747,7 +16735,7 @@ namespace  {
                 /**
              * Set the underlying query builder instance.
              *
-             * @param Builder $query
+             * @param \Illuminate\Database\Query\Builder $query
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16760,7 +16748,7 @@ namespace  {
                 /**
              * Get a base query builder instance.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function toBase()
@@ -16797,7 +16785,7 @@ namespace  {
                 /**
              * Get the model instance being queried.
              *
-             * @return Model|static
+             * @return \Illuminate\Database\Eloquent\Model|static
              * @static
              */
             public static function getModel()
@@ -16809,7 +16797,7 @@ namespace  {
                 /**
              * Set a model instance for the model being queried.
              *
-             * @param Model $model
+             * @param \Illuminate\Database\Eloquent\Model $model
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16823,7 +16811,7 @@ namespace  {
              * Get the given macro by name.
              *
              * @param string $name
-             * @return Closure
+             * @return \Closure
              * @static
              */
             public static function getMacro($name)
@@ -16849,7 +16837,7 @@ namespace  {
              * Get the given global macro by name.
              *
              * @param string $name
-             * @return Closure
+             * @return \Closure
              * @static
              */
             public static function getGlobalMacro($name)
@@ -16884,13 +16872,13 @@ namespace  {
                 /**
              * Add a relationship count / exists condition to the query.
              *
-             * @param Relation|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\Relation|string $relation
              * @param string $operator
              * @param int $count
              * @param string $boolean
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
-             * @throws RuntimeException
+             * @throws \RuntimeException
              * @static
              */
             public static function has($relation, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
@@ -16919,7 +16907,7 @@ namespace  {
              *
              * @param string $relation
              * @param string $boolean
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16946,7 +16934,7 @@ namespace  {
              * Add a relationship count / exists condition to the query with where clauses.
              *
              * @param string $relation
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @param string $operator
              * @param int $count
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -16962,7 +16950,7 @@ namespace  {
              * Add a relationship count / exists condition to the query with where clauses and an "or".
              *
              * @param string $relation
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @param string $operator
              * @param int $count
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -16978,7 +16966,7 @@ namespace  {
              * Add a relationship count / exists condition to the query with where clauses.
              *
              * @param string $relation
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -16992,7 +16980,7 @@ namespace  {
              * Add a relationship count / exists condition to the query with where clauses and an "or".
              *
              * @param string $relation
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17005,12 +16993,12 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query.
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
              * @param string $operator
              * @param int $count
              * @param string $boolean
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17023,7 +17011,7 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query with an "or".
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
              * @param string $operator
              * @param int $count
@@ -17039,10 +17027,10 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query.
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
              * @param string $boolean
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17055,7 +17043,7 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query with an "or".
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
@@ -17069,9 +17057,9 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query with where clauses.
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @param string $operator
              * @param int $count
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -17086,9 +17074,9 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query with where clauses and an "or".
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @param string $operator
              * @param int $count
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -17103,9 +17091,9 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query with where clauses.
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17118,9 +17106,9 @@ namespace  {
                 /**
              * Add a polymorphic relationship count / exists condition to the query with where clauses and an "or".
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
-             * @param Closure|null $callback
+             * @param \Closure|null $callback
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17134,7 +17122,7 @@ namespace  {
              * Add a basic where clause to a relationship query.
              *
              * @param string $relation
-             * @param Closure|string|array|Expression $column
+             * @param \Closure|string|array|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -17150,7 +17138,7 @@ namespace  {
              * Add an "or where" clause to a relationship query.
              *
              * @param string $relation
-             * @param Closure|string|array|Expression $column
+             * @param \Closure|string|array|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -17165,9 +17153,9 @@ namespace  {
                 /**
              * Add a polymorphic relationship condition to the query with a where clause.
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
-             * @param Closure|string|array|Expression $column
+             * @param \Closure|string|array|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -17182,9 +17170,9 @@ namespace  {
                 /**
              * Add a polymorphic relationship condition to the query with an "or where" clause.
              *
-             * @param MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
              * @param string|array $types
-             * @param Closure|string|array|Expression $column
+             * @param \Closure|string|array|\Illuminate\Database\Query\Expression $column
              * @param mixed $operator
              * @param mixed $value
              * @return \Illuminate\Database\Eloquent\Builder|static
@@ -17199,8 +17187,8 @@ namespace  {
                 /**
              * Add a morph-to relationship condition to the query.
              *
-             * @param MorphTo|string $relation
-             * @param Model|string $model
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Model|string $model
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17213,8 +17201,8 @@ namespace  {
                 /**
              * Add a morph-to relationship condition to the query with an "or where" clause.
              *
-             * @param MorphTo|string $relation
-             * @param Model|string $model
+             * @param \Illuminate\Database\Eloquent\Relations\MorphTo|string $relation
+             * @param \Illuminate\Database\Eloquent\Model|string $model
              * @return \Illuminate\Database\Eloquent\Builder|static
              * @static
              */
@@ -17227,11 +17215,11 @@ namespace  {
                 /**
              * Add a "belongs to" relationship where clause to the query.
              *
-             * @param Model $related
+             * @param \Illuminate\Database\Eloquent\Model $related
              * @param string $relationship
              * @param string $boolean
              * @return \Illuminate\Database\Eloquent\Builder|static
-             * @throws Exception
+             * @throws \Exception
              * @static
              */
             public static function whereBelongsTo($related, $relationshipName = null, $boolean = 'and')
@@ -17243,10 +17231,10 @@ namespace  {
                 /**
              * Add an "BelongsTo" relationship with an "or where" clause to the query.
              *
-             * @param Model $related
+             * @param \Illuminate\Database\Eloquent\Model $related
              * @param string $relationship
              * @return \Illuminate\Database\Eloquent\Builder|static
-             * @throws Exception
+             * @throws \Exception
              * @static
              */
             public static function orWhereBelongsTo($related, $relationshipName = null)
@@ -17368,7 +17356,7 @@ namespace  {
                 /**
              * Explains the query.
              *
-             * @return Collection
+             * @return \Illuminate\Support\Collection
              * @static
              */
             public static function explain()
@@ -17396,7 +17384,7 @@ namespace  {
              *
              * @param callable $callback
              * @param int $count
-             * @return Collection
+             * @return \Illuminate\Support\Collection
              * @static
              */
             public static function chunkMap($callback, $count = 1000)
@@ -17411,7 +17399,7 @@ namespace  {
              * @param callable $callback
              * @param int $count
              * @return bool
-             * @throws RuntimeException
+             * @throws \RuntimeException
              * @static
              */
             public static function each($callback, $count = 1000)
@@ -17456,8 +17444,8 @@ namespace  {
              * Query lazily, by chunks of the given size.
              *
              * @param int $chunkSize
-             * @return LazyCollection
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Support\LazyCollection
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function lazy($chunkSize = 1000)
@@ -17472,8 +17460,8 @@ namespace  {
              * @param int $count
              * @param string|null $column
              * @param string|null $alias
-             * @return LazyCollection
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Support\LazyCollection
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function lazyById($chunkSize = 1000, $column = null, $alias = null)
@@ -17486,7 +17474,7 @@ namespace  {
              * Execute the query and get the first result.
              *
              * @param array|string $columns
-             * @return Model|object|static|null
+             * @return \Illuminate\Database\Eloquent\Model|object|static|null
              * @static
              */
             public static function first($columns = [])
@@ -17499,9 +17487,9 @@ namespace  {
              * Execute the query and get the first result if it's the sole matching record.
              *
              * @param array|string $columns
-             * @return Model|object|static|null
-             * @throws RecordsNotFoundException
-             * @throws MultipleRecordsFoundException
+             * @return \Illuminate\Database\Eloquent\Model|object|static|null
+             * @throws \Illuminate\Database\RecordsNotFoundException
+             * @throws \Illuminate\Database\MultipleRecordsFoundException
              * @static
              */
             public static function baseSole($columns = [])
@@ -17557,27 +17545,27 @@ namespace  {
              * Set the columns to be selected.
              *
              * @param array|mixed $columns
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function select($columns = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->select($columns);
             }
 
                 /**
              * Add a subselect expression to the query.
              *
-             * @param Closure|Builder|\Illuminate\Database\Eloquent\Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string $query
              * @param string $as
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function selectSub($query, $as)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->selectSub($query, $as);
             }
 
@@ -17586,27 +17574,27 @@ namespace  {
              *
              * @param string $expression
              * @param array $bindings
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function selectRaw($expression, $bindings = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->selectRaw($expression, $bindings);
             }
 
                 /**
              * Makes "from" fetch from a subquery.
              *
-             * @param Closure|Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
              * @param string $as
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function fromSub($query, $as)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->fromSub($query, $as);
             }
 
@@ -17615,12 +17603,12 @@ namespace  {
              *
              * @param string $expression
              * @param mixed $bindings
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function fromRaw($expression, $bindings = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->fromRaw($expression, $bindings);
             }
 
@@ -17628,12 +17616,12 @@ namespace  {
              * Add a new select column to the query.
              *
              * @param array|mixed $column
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function addSelect($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->addSelect($column);
             }
 
@@ -17641,26 +17629,26 @@ namespace  {
              * Force the query to only return distinct results.
              *
              * @param mixed $distinct
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function distinct()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->distinct();
             }
 
                 /**
              * Set the table which the query is targeting.
              *
-             * @param Closure|Builder|string $table
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $table
              * @param string|null $as
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function from($table, $as = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->from($table, $as);
             }
 
@@ -17668,17 +17656,17 @@ namespace  {
              * Add a join clause to the query.
              *
              * @param string $table
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string|null $operator
              * @param string|null $second
              * @param string $type
              * @param bool $where
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function join($table, $first, $operator = null, $second = null, $type = 'inner', $where = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->join($table, $first, $operator, $second, $type, $where);
             }
 
@@ -17686,36 +17674,36 @@ namespace  {
              * Add a "join where" clause to the query.
              *
              * @param string $table
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string $operator
              * @param string $second
              * @param string $type
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function joinWhere($table, $first, $operator, $second, $type = 'inner')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->joinWhere($table, $first, $operator, $second, $type);
             }
 
                 /**
              * Add a subquery join clause to the query.
              *
-             * @param Closure|Builder|\Illuminate\Database\Eloquent\Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string $query
              * @param string $as
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string|null $operator
              * @param string|null $second
              * @param string $type
              * @param bool $where
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function joinSub($query, $as, $first, $operator = null, $second = null, $type = 'inner', $where = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->joinSub($query, $as, $first, $operator, $second, $type, $where);
             }
 
@@ -17723,15 +17711,15 @@ namespace  {
              * Add a left join to the query.
              *
              * @param string $table
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string|null $operator
              * @param string|null $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function leftJoin($table, $first, $operator = null, $second = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->leftJoin($table, $first, $operator, $second);
             }
 
@@ -17739,32 +17727,32 @@ namespace  {
              * Add a "join where" clause to the query.
              *
              * @param string $table
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string $operator
              * @param string $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function leftJoinWhere($table, $first, $operator, $second)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->leftJoinWhere($table, $first, $operator, $second);
             }
 
                 /**
              * Add a subquery left join to the query.
              *
-             * @param Closure|Builder|\Illuminate\Database\Eloquent\Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string $query
              * @param string $as
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string|null $operator
              * @param string|null $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function leftJoinSub($query, $as, $first, $operator = null, $second = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->leftJoinSub($query, $as, $first, $operator, $second);
             }
 
@@ -17772,15 +17760,15 @@ namespace  {
              * Add a right join to the query.
              *
              * @param string $table
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string|null $operator
              * @param string|null $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function rightJoin($table, $first, $operator = null, $second = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->rightJoin($table, $first, $operator, $second);
             }
 
@@ -17788,32 +17776,32 @@ namespace  {
              * Add a "right join where" clause to the query.
              *
              * @param string $table
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string $operator
              * @param string $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function rightJoinWhere($table, $first, $operator, $second)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->rightJoinWhere($table, $first, $operator, $second);
             }
 
                 /**
              * Add a subquery right join to the query.
              *
-             * @param Closure|Builder|\Illuminate\Database\Eloquent\Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string $query
              * @param string $as
-             * @param Closure|string $first
+             * @param \Closure|string $first
              * @param string|null $operator
              * @param string|null $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function rightJoinSub($query, $as, $first, $operator = null, $second = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->rightJoinSub($query, $as, $first, $operator, $second);
             }
 
@@ -17821,29 +17809,29 @@ namespace  {
              * Add a "cross join" clause to the query.
              *
              * @param string $table
-             * @param Closure|string|null $first
+             * @param \Closure|string|null $first
              * @param string|null $operator
              * @param string|null $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function crossJoin($table, $first = null, $operator = null, $second = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->crossJoin($table, $first, $operator, $second);
             }
 
                 /**
              * Add a subquery cross join to the query.
              *
-             * @param Closure|Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
              * @param string $as
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function crossJoinSub($query, $as)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->crossJoinSub($query, $as);
             }
 
@@ -17857,7 +17845,7 @@ namespace  {
              */
             public static function mergeWheres($wheres, $bindings)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 $instance->mergeWheres($wheres, $bindings);
             }
 
@@ -17868,12 +17856,12 @@ namespace  {
              * @param string $operator
              * @param bool $useDefault
              * @return array
-             * @throws InvalidArgumentException
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function prepareValueAndOperator($value, $operator, $useDefault = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->prepareValueAndOperator($value, $operator, $useDefault);
             }
 
@@ -17884,12 +17872,12 @@ namespace  {
              * @param string|null $operator
              * @param string|null $second
              * @param string|null $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereColumn($first, $operator = null, $second = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereColumn($first, $operator, $second, $boolean);
             }
 
@@ -17899,12 +17887,12 @@ namespace  {
              * @param string|array $first
              * @param string|null $operator
              * @param string|null $second
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereColumn($first, $operator = null, $second = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereColumn($first, $operator, $second);
             }
 
@@ -17914,12 +17902,12 @@ namespace  {
              * @param string $sql
              * @param mixed $bindings
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereRaw($sql, $bindings = [], $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereRaw($sql, $bindings, $boolean);
             }
 
@@ -17928,12 +17916,12 @@ namespace  {
              *
              * @param string $sql
              * @param mixed $bindings
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereRaw($sql, $bindings = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereRaw($sql, $bindings);
             }
 
@@ -17944,12 +17932,12 @@ namespace  {
              * @param mixed $values
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereIn($column, $values, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereIn($column, $values, $boolean, $not);
             }
 
@@ -17958,12 +17946,12 @@ namespace  {
              *
              * @param string $column
              * @param mixed $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereIn($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereIn($column, $values);
             }
 
@@ -17973,12 +17961,12 @@ namespace  {
              * @param string $column
              * @param mixed $values
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNotIn($column, $values, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNotIn($column, $values, $boolean);
             }
 
@@ -17987,12 +17975,12 @@ namespace  {
              *
              * @param string $column
              * @param mixed $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereNotIn($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereNotIn($column, $values);
             }
 
@@ -18000,15 +17988,15 @@ namespace  {
              * Add a "where in raw" clause for integer values to the query.
              *
              * @param string $column
-             * @param Arrayable|array $values
+             * @param \Illuminate\Contracts\Support\Arrayable|array $values
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereIntegerInRaw($column, $values, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereIntegerInRaw($column, $values, $boolean, $not);
             }
 
@@ -18016,13 +18004,13 @@ namespace  {
              * Add an "or where in raw" clause for integer values to the query.
              *
              * @param string $column
-             * @param Arrayable|array $values
-             * @return Builder
+             * @param \Illuminate\Contracts\Support\Arrayable|array $values
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereIntegerInRaw($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereIntegerInRaw($column, $values);
             }
 
@@ -18030,14 +18018,14 @@ namespace  {
              * Add a "where not in raw" clause for integer values to the query.
              *
              * @param string $column
-             * @param Arrayable|array $values
+             * @param \Illuminate\Contracts\Support\Arrayable|array $values
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereIntegerNotInRaw($column, $values, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereIntegerNotInRaw($column, $values, $boolean);
             }
 
@@ -18045,13 +18033,13 @@ namespace  {
              * Add an "or where not in raw" clause for integer values to the query.
              *
              * @param string $column
-             * @param Arrayable|array $values
-             * @return Builder
+             * @param \Illuminate\Contracts\Support\Arrayable|array $values
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereIntegerNotInRaw($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereIntegerNotInRaw($column, $values);
             }
 
@@ -18061,12 +18049,12 @@ namespace  {
              * @param string|array $columns
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNull($columns, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNull($columns, $boolean, $not);
             }
 
@@ -18074,12 +18062,12 @@ namespace  {
              * Add an "or where null" clause to the query.
              *
              * @param string|array $column
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereNull($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereNull($column);
             }
 
@@ -18088,28 +18076,28 @@ namespace  {
              *
              * @param string|array $columns
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNotNull($columns, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNotNull($columns, $boolean);
             }
 
                 /**
              * Add a where between statement to the query.
              *
-             * @param string|Expression $column
+             * @param string|\Illuminate\Database\Query\Expression $column
              * @param array $values
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereBetween($column, $values, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereBetween($column, $values, $boolean, $not);
             }
 
@@ -18120,12 +18108,12 @@ namespace  {
              * @param array $values
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereBetweenColumns($column, $values, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereBetweenColumns($column, $values, $boolean, $not);
             }
 
@@ -18134,12 +18122,12 @@ namespace  {
              *
              * @param string $column
              * @param array $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereBetween($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereBetween($column, $values);
             }
 
@@ -18148,12 +18136,12 @@ namespace  {
              *
              * @param string $column
              * @param array $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereBetweenColumns($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereBetweenColumns($column, $values);
             }
 
@@ -18163,12 +18151,12 @@ namespace  {
              * @param string $column
              * @param array $values
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNotBetween($column, $values, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNotBetween($column, $values, $boolean);
             }
 
@@ -18178,12 +18166,12 @@ namespace  {
              * @param string $column
              * @param array $values
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNotBetweenColumns($column, $values, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNotBetweenColumns($column, $values, $boolean);
             }
 
@@ -18192,12 +18180,12 @@ namespace  {
              *
              * @param string $column
              * @param array $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereNotBetween($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereNotBetween($column, $values);
             }
 
@@ -18206,12 +18194,12 @@ namespace  {
              *
              * @param string $column
              * @param array $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereNotBetweenColumns($column, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereNotBetweenColumns($column, $values);
             }
 
@@ -18219,12 +18207,12 @@ namespace  {
              * Add an "or where not null" clause to the query.
              *
              * @param string $column
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereNotNull($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereNotNull($column);
             }
 
@@ -18233,14 +18221,14 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
+             * @param \DateTimeInterface|string|null $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereDate($column, $operator, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereDate($column, $operator, $value, $boolean);
             }
 
@@ -18249,13 +18237,13 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
-             * @return Builder
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereDate($column, $operator, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereDate($column, $operator, $value);
             }
 
@@ -18264,14 +18252,14 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
+             * @param \DateTimeInterface|string|null $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereTime($column, $operator, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereTime($column, $operator, $value, $boolean);
             }
 
@@ -18280,13 +18268,13 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
-             * @return Builder
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereTime($column, $operator, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereTime($column, $operator, $value);
             }
 
@@ -18295,14 +18283,14 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
+             * @param \DateTimeInterface|string|null $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereDay($column, $operator, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereDay($column, $operator, $value, $boolean);
             }
 
@@ -18311,13 +18299,13 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
-             * @return Builder
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereDay($column, $operator, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereDay($column, $operator, $value);
             }
 
@@ -18326,14 +18314,14 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
+             * @param \DateTimeInterface|string|null $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereMonth($column, $operator, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereMonth($column, $operator, $value, $boolean);
             }
 
@@ -18342,13 +18330,13 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|null $value
-             * @return Builder
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereMonth($column, $operator, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereMonth($column, $operator, $value);
             }
 
@@ -18357,14 +18345,14 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|int|null $value
+             * @param \DateTimeInterface|string|int|null $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereYear($column, $operator, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereYear($column, $operator, $value, $boolean);
             }
 
@@ -18373,124 +18361,124 @@ namespace  {
              *
              * @param string $column
              * @param string $operator
-             * @param DateTimeInterface|string|int|null $value
-             * @return Builder
+             * @param \DateTimeInterface|string|int|null $value
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereYear($column, $operator, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereYear($column, $operator, $value);
             }
 
                 /**
              * Add a nested where statement to the query.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNested($callback, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNested($callback, $boolean);
             }
 
                 /**
              * Create a new query instance for nested where condition.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function forNestedWhere()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->forNestedWhere();
             }
 
                 /**
              * Add another query builder as a nested where to the query builder.
              *
-             * @param Builder $query
+             * @param \Illuminate\Database\Query\Builder $query
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function addNestedWhereQuery($query, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->addNestedWhereQuery($query, $boolean);
             }
 
                 /**
              * Add an exists clause to the query.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereExists($callback, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereExists($callback, $boolean, $not);
             }
 
                 /**
              * Add an or exists clause to the query.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereExists($callback, $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereExists($callback, $not);
             }
 
                 /**
              * Add a where not exists clause to the query.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereNotExists($callback, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNotExists($callback, $boolean);
             }
 
                 /**
              * Add a where not exists clause to the query.
              *
-             * @param Closure $callback
-             * @return Builder
+             * @param \Closure $callback
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereNotExists($callback)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereNotExists($callback);
             }
 
                 /**
              * Add an exists clause to the query.
              *
-             * @param Builder $query
+             * @param \Illuminate\Database\Query\Builder $query
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function addWhereExistsQuery($query, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->addWhereExistsQuery($query, $boolean, $not);
             }
 
@@ -18501,13 +18489,13 @@ namespace  {
              * @param string $operator
              * @param array $values
              * @param string $boolean
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function whereRowValues($columns, $operator, $values, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereRowValues($columns, $operator, $values, $boolean);
             }
 
@@ -18517,12 +18505,12 @@ namespace  {
              * @param array $columns
              * @param string $operator
              * @param array $values
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereRowValues($columns, $operator, $values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereRowValues($columns, $operator, $values);
             }
 
@@ -18533,12 +18521,12 @@ namespace  {
              * @param mixed $value
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereJsonContains($column, $value, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereJsonContains($column, $value, $boolean, $not);
             }
 
@@ -18547,12 +18535,12 @@ namespace  {
              *
              * @param string $column
              * @param mixed $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereJsonContains($column, $value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereJsonContains($column, $value);
             }
 
@@ -18562,12 +18550,12 @@ namespace  {
              * @param string $column
              * @param mixed $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereJsonDoesntContain($column, $value, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereJsonDoesntContain($column, $value, $boolean);
             }
 
@@ -18576,12 +18564,12 @@ namespace  {
              *
              * @param string $column
              * @param mixed $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereJsonDoesntContain($column, $value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereJsonDoesntContain($column, $value);
             }
 
@@ -18592,12 +18580,12 @@ namespace  {
              * @param mixed $operator
              * @param mixed $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function whereJsonLength($column, $operator, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereJsonLength($column, $operator, $value, $boolean);
             }
 
@@ -18607,12 +18595,12 @@ namespace  {
              * @param string $column
              * @param mixed $operator
              * @param mixed $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orWhereJsonLength($column, $operator, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orWhereJsonLength($column, $operator, $value);
             }
 
@@ -18621,12 +18609,12 @@ namespace  {
              *
              * @param string $method
              * @param array $parameters
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function dynamicWhere($method, $parameters)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->dynamicWhere($method, $parameters);
             }
 
@@ -18634,12 +18622,12 @@ namespace  {
              * Add a "group by" clause to the query.
              *
              * @param array|string $groups
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function groupBy(...$groups)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->groupBy(...$groups);
             }
 
@@ -18648,12 +18636,12 @@ namespace  {
              *
              * @param string $sql
              * @param array $bindings
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function groupByRaw($sql, $bindings = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->groupByRaw($sql, $bindings);
             }
 
@@ -18664,12 +18652,12 @@ namespace  {
              * @param string|null $operator
              * @param string|null $value
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function having($column, $operator = null, $value = null, $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->having($column, $operator, $value, $boolean);
             }
 
@@ -18679,12 +18667,12 @@ namespace  {
              * @param string $column
              * @param string|null $operator
              * @param string|null $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orHaving($column, $operator = null, $value = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orHaving($column, $operator, $value);
             }
 
@@ -18695,12 +18683,12 @@ namespace  {
              * @param array $values
              * @param string $boolean
              * @param bool $not
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function havingBetween($column, $values, $boolean = 'and', $not = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->havingBetween($column, $values, $boolean, $not);
             }
 
@@ -18710,12 +18698,12 @@ namespace  {
              * @param string $sql
              * @param array $bindings
              * @param string $boolean
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function havingRaw($sql, $bindings = [], $boolean = 'and')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->havingRaw($sql, $bindings, $boolean);
             }
 
@@ -18724,40 +18712,40 @@ namespace  {
              *
              * @param string $sql
              * @param array $bindings
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orHavingRaw($sql, $bindings = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orHavingRaw($sql, $bindings);
             }
 
                 /**
              * Add an "order by" clause to the query.
              *
-             * @param Closure|\Illuminate\Database\Eloquent\Builder|Builder|Expression|string $column
+             * @param \Closure|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string $column
              * @param string $direction
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function orderBy($column, $direction = 'asc')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orderBy($column, $direction);
             }
 
                 /**
              * Add a descending "order by" clause to the query.
              *
-             * @param Closure|\Illuminate\Database\Eloquent\Builder|Builder|Expression|string $column
-             * @return Builder
+             * @param \Closure|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string $column
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orderByDesc($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orderByDesc($column);
             }
 
@@ -18765,12 +18753,12 @@ namespace  {
              * Put the query's results in random order.
              *
              * @param string $seed
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function inRandomOrder($seed = '')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->inRandomOrder($seed);
             }
 
@@ -18779,12 +18767,12 @@ namespace  {
              *
              * @param string $sql
              * @param array $bindings
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function orderByRaw($sql, $bindings = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->orderByRaw($sql, $bindings);
             }
 
@@ -18792,12 +18780,12 @@ namespace  {
              * Alias to set the "offset" value of the query.
              *
              * @param int $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function skip($value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->skip($value);
             }
 
@@ -18805,12 +18793,12 @@ namespace  {
              * Set the "offset" value of the query.
              *
              * @param int $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function offset($value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->offset($value);
             }
 
@@ -18818,12 +18806,12 @@ namespace  {
              * Alias to set the "limit" value of the query.
              *
              * @param int $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function take($value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->take($value);
             }
 
@@ -18831,12 +18819,12 @@ namespace  {
              * Set the "limit" value of the query.
              *
              * @param int $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function limit($value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->limit($value);
             }
 
@@ -18845,12 +18833,12 @@ namespace  {
              *
              * @param int $page
              * @param int $perPage
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function forPage($page, $perPage = 15)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->forPage($page, $perPage);
             }
 
@@ -18860,12 +18848,12 @@ namespace  {
              * @param int $perPage
              * @param int|null $lastId
              * @param string $column
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function forPageBeforeId($perPage = 15, $lastId = 0, $column = 'id')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->forPageBeforeId($perPage, $lastId, $column);
             }
 
@@ -18875,53 +18863,53 @@ namespace  {
              * @param int $perPage
              * @param int|null $lastId
              * @param string $column
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function forPageAfterId($perPage = 15, $lastId = 0, $column = 'id')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->forPageAfterId($perPage, $lastId, $column);
             }
 
                 /**
              * Remove all existing orders and optionally add a new order.
              *
-             * @param Closure|Builder|Expression|string|null $column
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string|null $column
              * @param string $direction
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function reorder($column = null, $direction = 'asc')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->reorder($column, $direction);
             }
 
                 /**
              * Add a union statement to the query.
              *
-             * @param Builder|Closure $query
+             * @param \Illuminate\Database\Query\Builder|\Closure $query
              * @param bool $all
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function union($query, $all = false)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->union($query, $all);
             }
 
                 /**
              * Add a union all statement to the query.
              *
-             * @param Builder|Closure $query
-             * @return Builder
+             * @param \Illuminate\Database\Query\Builder|\Closure $query
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function unionAll($query)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->unionAll($query);
             }
 
@@ -18929,36 +18917,36 @@ namespace  {
              * Lock the selected rows in the table.
              *
              * @param string|bool $value
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function lock($value = true)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->lock($value);
             }
 
                 /**
              * Lock the selected rows in the table for updating.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function lockForUpdate()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->lockForUpdate();
             }
 
                 /**
              * Share lock the selected rows in the table.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function sharedLock()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->sharedLock();
             }
 
@@ -18966,12 +18954,12 @@ namespace  {
              * Register a closure to be invoked before the query is executed.
              *
              * @param callable $callback
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function beforeQuery($callback)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->beforeQuery($callback);
             }
 
@@ -18983,7 +18971,7 @@ namespace  {
              */
             public static function applyBeforeQueryCallbacks()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 $instance->applyBeforeQueryCallbacks();
             }
 
@@ -18995,7 +18983,7 @@ namespace  {
              */
             public static function toSql()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->toSql();
             }
 
@@ -19008,7 +18996,7 @@ namespace  {
              */
             public static function getCountForPagination($columns = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->getCountForPagination($columns);
             }
 
@@ -19022,7 +19010,7 @@ namespace  {
              */
             public static function implode($column, $glue = '')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->implode($column, $glue);
             }
 
@@ -19034,7 +19022,7 @@ namespace  {
              */
             public static function exists()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->exists();
             }
 
@@ -19046,33 +19034,33 @@ namespace  {
              */
             public static function doesntExist()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->doesntExist();
             }
 
                 /**
              * Execute the given callback if no rows exist for the current query.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @return mixed
              * @static
              */
             public static function existsOr($callback)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->existsOr($callback);
             }
 
                 /**
              * Execute the given callback if rows exist for the current query.
              *
-             * @param Closure $callback
+             * @param \Closure $callback
              * @return mixed
              * @static
              */
             public static function doesntExistOr($callback)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->doesntExistOr($callback);
             }
 
@@ -19085,7 +19073,7 @@ namespace  {
              */
             public static function count($columns = '*')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->count($columns);
             }
 
@@ -19098,7 +19086,7 @@ namespace  {
              */
             public static function min($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->min($column);
             }
 
@@ -19111,7 +19099,7 @@ namespace  {
              */
             public static function max($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->max($column);
             }
 
@@ -19124,7 +19112,7 @@ namespace  {
              */
             public static function sum($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->sum($column);
             }
 
@@ -19137,7 +19125,7 @@ namespace  {
              */
             public static function avg($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->avg($column);
             }
 
@@ -19150,7 +19138,7 @@ namespace  {
              */
             public static function average($column)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->average($column);
             }
 
@@ -19164,7 +19152,7 @@ namespace  {
              */
             public static function aggregate($function, $columns = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->aggregate($function, $columns);
             }
 
@@ -19178,7 +19166,7 @@ namespace  {
              */
             public static function numericAggregate($function, $columns = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->numericAggregate($function, $columns);
             }
 
@@ -19191,7 +19179,7 @@ namespace  {
              */
             public static function insert($values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->insert($values);
             }
 
@@ -19204,7 +19192,7 @@ namespace  {
              */
             public static function insertOrIgnore($values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->insertOrIgnore($values);
             }
 
@@ -19218,7 +19206,7 @@ namespace  {
              */
             public static function insertGetId($values, $sequence = null)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->insertGetId($values, $sequence);
             }
 
@@ -19226,13 +19214,13 @@ namespace  {
              * Insert new records into the table using a subquery.
              *
              * @param array $columns
-             * @param Closure|Builder|string $query
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
              * @return int
              * @static
              */
             public static function insertUsing($columns, $query)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->insertUsing($columns, $query);
             }
 
@@ -19245,7 +19233,7 @@ namespace  {
              */
             public static function updateFrom($values)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->updateFrom($values);
             }
 
@@ -19259,7 +19247,7 @@ namespace  {
              */
             public static function updateOrInsert($attributes, $values = [])
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->updateOrInsert($attributes, $values);
             }
 
@@ -19271,7 +19259,7 @@ namespace  {
              */
             public static function truncate()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 $instance->truncate();
             }
 
@@ -19279,12 +19267,12 @@ namespace  {
              * Create a raw database expression.
              *
              * @param mixed $value
-             * @return Expression
+             * @return \Illuminate\Database\Query\Expression
              * @static
              */
             public static function raw($value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->raw($value);
             }
 
@@ -19296,7 +19284,7 @@ namespace  {
              */
             public static function getBindings()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->getBindings();
             }
 
@@ -19308,7 +19296,7 @@ namespace  {
              */
             public static function getRawBindings()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->getRawBindings();
             }
 
@@ -19317,13 +19305,13 @@ namespace  {
              *
              * @param array $bindings
              * @param string $type
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function setBindings($bindings, $type = 'where')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->setBindings($bindings, $type);
             }
 
@@ -19332,13 +19320,13 @@ namespace  {
              *
              * @param mixed $value
              * @param string $type
-             * @return Builder
-             * @throws InvalidArgumentException
+             * @return \Illuminate\Database\Query\Builder
+             * @throws \InvalidArgumentException
              * @static
              */
             public static function addBinding($value, $type = 'where')
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->addBinding($value, $type);
             }
 
@@ -19351,20 +19339,20 @@ namespace  {
              */
             public static function castBinding($value)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->castBinding($value);
             }
 
                 /**
              * Merge an array of bindings into our bindings.
              *
-             * @param Builder $query
-             * @return Builder
+             * @param \Illuminate\Database\Query\Builder $query
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function mergeBindings($query)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->mergeBindings($query);
             }
 
@@ -19377,43 +19365,43 @@ namespace  {
              */
             public static function cleanBindings($bindings)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->cleanBindings($bindings);
             }
 
                 /**
              * Get the database query processor instance.
              *
-             * @return Processor
+             * @return \Illuminate\Database\Query\Processors\Processor
              * @static
              */
             public static function getProcessor()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->getProcessor();
             }
 
                 /**
              * Get the query grammar instance.
              *
-             * @return Grammar
+             * @return \Illuminate\Database\Query\Grammars\Grammar
              * @static
              */
             public static function getGrammar()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->getGrammar();
             }
 
                 /**
              * Use the write pdo for query.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function useWritePdo()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->useWritePdo();
             }
 
@@ -19426,7 +19414,7 @@ namespace  {
              */
             public static function cloneWithout($properties)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->cloneWithout($properties);
             }
 
@@ -19439,31 +19427,31 @@ namespace  {
              */
             public static function cloneWithoutBindings($except)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->cloneWithoutBindings($except);
             }
 
                 /**
              * Dump the current SQL and bindings.
              *
-             * @return Builder
+             * @return \Illuminate\Database\Query\Builder
              * @static
              */
             public static function dump()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->dump();
             }
 
                 /**
              * Die and dump the current SQL and bindings.
              *
-             * @return never
+             * @return \Illuminate\Database\Query\never
              * @static
              */
             public static function dd()
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->dd();
             }
 
@@ -19477,7 +19465,7 @@ namespace  {
              */
             public static function macro($name, $macro)
             {
-                                Builder::macro($name, $macro);
+                                \Illuminate\Database\Query\Builder::macro($name, $macro);
             }
 
                 /**
@@ -19486,12 +19474,12 @@ namespace  {
              * @param object $mixin
              * @param bool $replace
              * @return void
-             * @throws ReflectionException
+             * @throws \ReflectionException
              * @static
              */
             public static function mixin($mixin, $replace = true)
             {
-                                Builder::mixin($mixin, $replace);
+                                \Illuminate\Database\Query\Builder::mixin($mixin, $replace);
             }
 
                 /**
@@ -19500,12 +19488,12 @@ namespace  {
              * @param string $method
              * @param array $parameters
              * @return mixed
-             * @throws BadMethodCallException
+             * @throws \BadMethodCallException
              * @static
              */
             public static function macroCall($method, $parameters)
             {
-                                /** @var Builder $instance */
+                                /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->macroCall($method, $parameters);
             }
                     }

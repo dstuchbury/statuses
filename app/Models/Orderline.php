@@ -18,10 +18,12 @@ use Throwable;
  *
  * @property int $id
  * @property int $order_id
+ * @property string $orderline_ref
  * @property int $status
  * @property int $quantity
  * @property string $price_unit
  * @property string $price_total
+ * @property string $barcode
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property-read Order $order
@@ -32,10 +34,12 @@ use Throwable;
  * @method static Builder|Orderline whereCreatedAt($value)
  * @method static Builder|Orderline whereId($value)
  * @method static Builder|Orderline whereOrderId($value)
+ * @method static Builder|Orderline whereOrderlineRef($value)
  * @method static Builder|Orderline wherePriceTotal($value)
  * @method static Builder|Orderline wherePriceUnit($value)
  * @method static Builder|Orderline whereQuantity($value)
  * @method static Builder|Orderline whereStatus($value)
+ * @method static Builder|Orderline whereBarcode($value)
  * @method static Builder|Orderline whereUpdatedAt($value)
  * @mixin Eloquent
  */
@@ -45,9 +49,11 @@ class Orderline extends Model
 
     protected $fillable = [
         'order_id',
+        'orderline_ref',
         'price_unit',
         'quantity',
         'status',
+        'barcode',
     ];
 
     public const STATUS = [
@@ -117,5 +123,20 @@ class Orderline extends Model
         }
 
         return true;
+    }
+
+    public function getPrintableStates(): array
+    {
+        return [
+            'ready',
+            'production released',
+            'in production',
+            'queued reprint'
+        ];
+    }
+
+    public function isPrintable(): bool
+    {
+        return in_array($this->getStatus(), $this->getPrintableStates());
     }
 }

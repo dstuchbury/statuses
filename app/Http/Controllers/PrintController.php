@@ -18,6 +18,7 @@ class PrintController extends Controller
         }
 
         if (! $request->input('machine_id')) {
+            // In reality we would look for the machine to check it exists, then store it in $machine or return 404 as here.
             return EndeavourResponse::notFound(sprintf('Machine %s not found', $request->input('machine_id')));
         }
 

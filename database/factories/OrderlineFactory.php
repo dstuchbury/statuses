@@ -10,7 +10,7 @@ class OrderlineFactory extends Factory
 {
     protected $model = Orderline::class;
 
-    #[ArrayShape(['order_id' => "int", 'quantity' => "int", 'price_unit' => "int", 'status' => "int", 'price_total' => "float|int", 'barcode' => "string"])]
+    #[ArrayShape(['order_id' => "int", 'orderline_ref' => "int", 'quantity' => "int", 'price_unit' => "int", 'status' => "int", 'price_total' => "float|int", 'barcode' => "string"])]
     public function definition(): array
     {
         $quantity = $this->faker->numberBetween(1, 250);
@@ -18,6 +18,7 @@ class OrderlineFactory extends Factory
 
         return [
             'order_id' => 1,
+            'orderline_ref' => $this->faker->numberBetween(100, 10000),
             'quantity' => $quantity,
             'price_unit' => $price_unit,
             'status' => $this->faker->numberBetween(1, 10),
